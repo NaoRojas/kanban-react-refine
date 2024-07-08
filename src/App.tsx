@@ -1,10 +1,18 @@
 import { Refine, WelcomePage } from "@refinedev/core";
+import { DevtoolsPanel, DevtoolsProvider } from "@refinedev/devtools";
 
 function App() {
   return (
-    <Refine>
-      <WelcomePage />
-    </Refine>
+    <DevtoolsProvider>
+      <Refine
+        options={{
+          projectId: "wFJqb4-AgWaXj-oyV20X",
+        }}
+      >
+        <WelcomePage />
+        <DevtoolsPanel />
+      </Refine>
+    </DevtoolsProvider>
   );
 }
 
